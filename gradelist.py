@@ -1,3 +1,6 @@
+from exceptions import ValueRangeException, ListRangeException, ListIndexException
+
+
 class GradeList:
     """
     Eine Liste von Notenwerte.
@@ -32,9 +35,12 @@ class GradeList:
         """
         elements = self.current_grade_count
         if elements < self._MAX_GRADE_COUNT:
-            self._grades.append(grade)
+            if (1.0 <= grade <= 6.0):
+                self._grades.append(grade)
+            else:
+                raise ValueRangeException(grade)
         else:
-            print('FEHLER: Zu viele Werte eingegeben\n')
+            raise ListRangeException(self._MAX_GRADE_COUNT)
 
     @property
     def max_grade_count(self):
@@ -58,7 +64,10 @@ class GradeList:
         :param index: Position des Notenwertes
         :return: Notenwert
         """
-        return self._grades[index]
+        if index <= self.current_grade_count:
+            return self._grades[index]
+        else:
+            raise ListIndexException(index)
 
     def remove_grade(self, index: int):
         """
