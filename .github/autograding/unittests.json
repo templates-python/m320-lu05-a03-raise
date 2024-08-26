@@ -1,0 +1,38 @@
+[
+  {
+    "name": "test_list_index_ok",
+    "function": "test_list_index_ok",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_list_index_exception",
+    "function": "test_list_index_exception",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_value_range_ok",
+    "function": "test_value_range_ok",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_value_range_low",
+    "function": "test_value_range_low",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_value_range_high",
+    "function": "test_value_range_high",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_number_too_large",
+    "function": "test_number_too_large",
+    "timeout": 10,
+    "points": 1
+  }
+]
